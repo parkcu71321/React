@@ -1,0 +1,9 @@
+.dialog-box {
+    background-color: #dcc4ae;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;  /* 화면 가로 중앙 정렬 */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
