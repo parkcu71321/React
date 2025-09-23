@@ -17,4 +17,4 @@ class Notification extends React.Component{
     }
 }
 
-export default Notification;
+export default Notification;            //다른 파일에서 Notification 컴포넌트를 import 할 수 있게 내보냄
