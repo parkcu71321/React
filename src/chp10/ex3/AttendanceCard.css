@@ -28,6 +28,17 @@
 
 .student-card:hover {       /*student-card에 마우스 올려두면 Y축 -(위) 방향으로 5px만큼 이동*/
     transform: translateY(-5px);
+    background-image: url('./img/르클레르.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* hover 시 기존 내용 숨기기 */
+.student-card:hover .student-info,
+.student-card:hover .student-avatar {
+    opacity: 0;   /* 요소 사라짐 */
+    pointer-events: none; /* 클릭 등 방지 */
 }
 
 .student-avatar {
