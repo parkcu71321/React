@@ -3,10 +3,10 @@ import './AttendanceCard.css'
 import img1 from './img/르클레르.png'       //지정한 이미지를 img1이라는 변수로 사용한다
 
 const students=[
-    {id:1, name:"사",avatar:"https://randomuser.me/api/portraits/men/1.jpg"},        //{} - 하나의 객체
-    {id:2, name:"랑", avatar:"https://randomuser.me/api/portraits/women/2.jpg"},
-    {id:3, name:"해", avatar:"https://randomuser.me/api/portraits/men/4.jpg"},
-    {id:4, name:"요", avatar:"https://randomuser.me/api/portraits/men/3.jpg"}
+    {id:1, name:"사", grade:"사", major:"math",avatar:"https://randomuser.me/api/portraits/men/1.jpg"},        //{} - 하나의 객체
+    {id:2, name:"랑", grade:"랑", major:"earth",avatar:"https://randomuser.me/api/portraits/women/2.jpg"},
+    {id:3, name:"해", grade:"해", major:"athletic",avatar:"https://randomuser.me/api/portraits/men/4.jpg"},
+    {id:4, name:"요", grade:"요", major:"english",avatar:"https://randomuser.me/api/portraits/men/3.jpg"}
 ]
 
 function AttendanceCard(){
