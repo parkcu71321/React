@@ -1,0 +1,82 @@
+.lottery-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.lottery-title {
+    color: #444;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.lottery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* 개별 복권 카드 */
+.lottery-card {
+    width: 180px;
+    height: 230px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #fffbea;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* hover 시 위로 올라가는 효과 제거, 대신 흔들림 추가 */
+.lottery-card:hover {
+    animation: shake 0.4s ease-in-out infinite;
+}
+
+/* 기본 앞면 */
+.lottery-front {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #333;
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+
+/* 뒷면 (hover 시 보이게) */
+.lottery-back {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* hover 시 전환 */
+.lottery-card:hover .lottery-front {
+    opacity: 0;
+}
+
+.lottery-card:hover .lottery-back {
+    opacity: 1;
+}
+
+/* 💫 흔들림 애니메이션 */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(2deg); }
+    40% { transform: rotate(-2deg); }
+    60% { transform: rotate(2deg); }
+    80% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
