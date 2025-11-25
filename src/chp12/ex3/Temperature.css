@@ -1,0 +1,109 @@
+/* ===== CYBERPUNK NEON UI ===== */
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: radial-gradient(circle at 30% 20%, #0a0014, #000);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* 배경 파티클 */
+body::before {
+    content: "";
+    position: absolute;
+    width: 250vw;
+    height: 250vh;
+    background: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.13;
+    animation: rotate-bg 24s linear infinite;
+    pointer-events: none;
+}
+@keyframes rotate-bg {
+    100% { transform: rotate(360deg); }
+}
+
+/* 카드 본체 */
+div {
+    width: 480px;
+    padding: 30px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 0, 255, 0.25);
+    position: relative;
+    transition: transform 0.15s ease-out;
+    box-shadow:
+            0 0 18px rgba(255, 0, 255, 0.4),
+            0 0 30px rgba(0, 255, 255, 0.3),
+            inset 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 카드 네온 외곽 */
+div::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 26px;
+    background: conic-gradient(
+            from 60deg,
+            #ff0099,
+            #00eaff,
+            #8fff00,
+            #ff0099
+    );
+    filter: blur(16px);
+    z-index: -1;
+    animation: glow 6s linear infinite;
+}
+@keyframes glow {
+    100% { transform: rotate(360deg); }
+}
+
+/* 네온 타이틀 */
+legend {
+    font-size: 23px;
+    font-weight: 700;
+    text-shadow: 0 0 8px #00eaff, 0 0 14px #ff0099;
+}
+
+/* 필드셋 네온 프레임 */
+fieldset {
+    border: 2px solid rgba(0, 255, 255, 0.35);
+    border-radius: 14px;
+    padding: 18px 24px;
+    margin-bottom: 32px;
+    transition: box-shadow 0.3s;
+}
+fieldset:hover {
+    box-shadow: 0 0 18px rgba(0, 255, 255, 0.4);
+}
+
+/* input 미래창 */
+input {
+    width: 100%;
+    font-size: 22px;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(2px);
+    transition: 0.2s;
+}
+input:focus {
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 0 13px #00eaff;
+}
+
+/* 마우스 움직임으로 3D tilt */
+div:hover {
+    transform: perspective(850px) rotateX(8deg) rotateY(-6deg) translateY(-4px);
+}
