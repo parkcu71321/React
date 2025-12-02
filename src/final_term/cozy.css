@@ -1,6 +1,5 @@
-/* Cozy 페이지 전체 래퍼 */
 .cozy-wrapper {
-    background-color: #FCEFAF; /* 연노랑 배경 */
+    background-color: #FCEFAF;
     min-height: 100vh;
     width: 100vw;
     box-sizing: border-box;
@@ -8,8 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Times New Roman', serif; /* 명조체 */
-    position: relative; /* 버튼 위치 기준점 */
+    font-family: 'Times New Roman', serif;
+    position: relative;
 }
 
 .title {
@@ -17,13 +16,13 @@
     margin-bottom: 60px;
     margin-top: 20px;
 }
+
 .title h1 {
     font-size: 60px;
     font-weight: normal;
     color: black;
 }
 
-/* 섹션 스타일 */
 .section1, .section2 {
     display: flex;
     justify-content: center;
@@ -33,7 +32,6 @@
     margin-bottom: 100px;
 }
 
-/* 이미지 스타일 */
 .section-img {
     width: 350px;
     height: 500px;
@@ -42,7 +40,6 @@
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
 }
 
-/* 텍스트 박스 */
 .text-box {
     display: flex;
     flex-direction: column;
@@ -59,10 +56,10 @@
     display: block;
 }
 
-
 .text-box ul {
     padding-left: 20px;
 }
+
 .text-box li {
     color: black;
     font-size: 20px;

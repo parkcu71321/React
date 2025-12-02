@@ -2,7 +2,7 @@ import React from 'react';
 import './cozy.css';
 import franceImg from './프랑스.jpeg';
 import afterImg from './애프터.jpg';
-
+//
 function Cozy(props) {
     return (
         <div className="cozy-wrapper">

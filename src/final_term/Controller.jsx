@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Main from './main';
 import Hip from './hip';
 import Cozy from './cozy';
-
+//
 function Controller() {
     const [page, setPage] = useState('main');
 
